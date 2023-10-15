@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Open+Sans:wght@300&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: #e4fbfb;
+}
+
+body header p, body main p, body footer p {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 480px) {
+  * {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  * {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  * {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  * {
+    font-size: 60px;
+  }
+}
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  transition: 0.7s;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5px;
+  z-index: 1;
+}
+header .logo {
+  display: flex;
+  cursor: pointer;
+}
+header .logo img {
+  width: 2em;
+  height: 2em;
+  transition: all 0.3s;
+}
+header .logo img:hover {
+  transform: scale(1.2);
+}
+header .perfil {
+  cursor: pointer;
+}
+header .perfil img {
+  width: 2em;
+  height: 2em;
+  transition: all 0.3s;
+}
+header .perfil img:hover {
+  transform: scale(1.2);
+}
+header .perfilf {
+  display: none;
+  margin: 15px 0;
+  z-index: 2;
+  cursor: pointer;
+}
+header .perfilf img {
+  width: 2em;
+  height: 2em;
+  transition: all 0.3s;
+}
+header .perfilf img:hover {
+  transform: scale(1.2);
+}
+header .nav {
+  position: absolute;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  top: 0;
+  right: -280px;
+  background-color: #0a1e38;
+  padding: 2em;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+header .nav .cabecera {
+  position: absolute;
+  padding: 15px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .nav .nav-list {
+  margin-top: 20%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 2em;
+}
+header .nav .nav-list li:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+header .nav .nav-list li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #898c8d;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: 0.7s;
+}
+header .nav .nav-list li a:hover {
+  color: #ffbc0e;
+  transition: all 0.3s;
+}
+header .abrir-menu {
+  display: block;
+  border: 0;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+header .abrir-menu i {
+  font-size: 2em;
+  color: #ececec;
+  transition: 0.1s;
+}
+header .abrir-menu i:hover {
+  font-size: 2.2em;
+  color: #ffbc0e;
+}
+header .cerrar-menu {
+  display: block;
+  border: 0;
+  font-size: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+header .cerrar-menu i {
+  font-size: 2em;
+  color: #ececec;
+  transition: 0.1s;
+}
+header .cerrar-menu i:hover {
+  font-size: 2.2em;
+  color: #721009;
+}
+header.abajo {
+  background-color: #154580;
+  padding: 15px 10px;
+}
+header.abajo .nav-list li a {
+  color: rgba(236, 236, 236, 0.9254901961);
+}
+header .nav.visible {
+  opacity: 1;
+  transform: translate(-280px, 0);
+  visibility: visible;
+}
+
+@media screen and (min-width: 480px) {
+  header {
+    padding: 30px 10px;
+  }
+  header.abajo {
+    padding: 25px 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header.abajo {
+    padding: 30px 10px;
+  }
+  header .logo {
+    z-index: 2;
+  }
+  header .abrir-menu,
+  header .cerrar-menu {
+    display: none;
+  }
+  header .nav {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header .nav .perfil {
+    display: none;
+  }
+  header .nav .nav-list {
+    position: absolute;
+    margin: 0;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header .nav .nav-list li a {
+    margin: 0;
+    font-size: 0.7em;
+  }
+  header .perfilf {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 30px 20px;
+  }
+  header.abajo {
+    padding: 40px 35px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    padding: 40px 25px;
+  }
+  header.abajo {
+    padding: 45px 35px;
+  }
+  header .nav .nav-list {
+    margin: 0 20px;
+  }
+}
+.pie {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-top: 1px solid #04152b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #154580;
+}
+.pie .ubicacion, .pie .contactos, .pie .preguntas {
+  padding: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+.pie .contactos a {
+  padding: 0 0.6em;
+  font-size: 20px;
+}
+.pie .contactos a#whatsapp:hover i {
+  font-size: 1.2em;
+  color: #128C7E;
+}
+.pie .contactos a#instagram:hover i {
+  font-size: 1.2em;
+  color: #C13584;
+}
+.pie .contactos a#github:hover i {
+  font-size: 1.2em;
+  color: #171515;
+}
+.pie .contactos a i {
+  font-size: 1em;
+  color: #fff;
+  transition: 0.3s;
+}
+.pie p:not(#dire) {
+  font-size: 1.2em;
+  color: #ffbc0e;
+  padding: 5px;
+  font-weight: 600;
+}
+.pie p#dire {
+  font-size: 1em;
+  color: #fff;
+}
+.pie a#link {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+  .pie {
+    position: relative;
+    height: fit-content;
+    padding: 30px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .pie .ubicacion, .pie .contactos, .pie .preguntas {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .pie {
+    font-size: 30px;
+  }
+  .pie .ubicacion, .pie .contactos, .pie .preguntas {
+    font-size: 1em;
+  }
+  .pie .contactos a {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pie {
+    font-size: 35px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .pie {
+    font-size: 40px;
+  }
+}
+.index {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.index .fondo_Index {
+  z-index: -1;
+  display: flex;
+  width: 100vw;
+  height: 70vh;
+  min-height: 280px;
+  max-height: 320px;
+  background-image: url(../assets/Img/Fondo_Index.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 1em;
+}
+.index .fondo_Index h1 {
+  font-size: 2rem;
+  font-style: italic;
+  color: #ffbc0e;
+}
+.index .comenzar {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.index .comenzar button {
+  position: relative;
+  width: 180px;
+  height: 50px;
+  background: linear-gradient(0deg, #154580, #206b9a);
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.index .comenzar button:hover {
+  transform: scale(1.2);
+  color: #ffbc0e;
+}
+.index .comenzar button:hover a {
+  color: #ffbc0e;
+}
+.index .comenzar button a {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 480px) {
+  .index .fondo_Index {
+    min-height: 460px;
+    max-height: 500px;
+  }
+  .index .comenzar {
+    height: 100px;
+  }
+  .index .comenzar button {
+    position: relative;
+    width: 250px;
+    height: 80px;
+    background: linear-gradient(0deg, #154580, #206b9a);
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .index .comenzar button:hover {
+    transform: scale(1.2);
+    color: #ffbc0e;
+  }
+}
+@media screen and (min-width: 768px) {
+  .index .fondo_Index {
+    min-height: 580px;
+    max-height: 620px;
+  }
+  .index .comenzar button {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .index .fondo_Index {
+    width: 100%;
+    height: 100%;
+    min-width: none;
+    max-width: none;
+    min-height: 620px;
+    max-height: 640px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .index .fondo_Index {
+    min-width: none;
+    max-width: none;
+    min-height: 800px;
+    max-height: 840px;
+  }
+  .index .comenzar button {
+    width: 450px;
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

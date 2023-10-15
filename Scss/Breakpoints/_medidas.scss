@@ -1,0 +1,5 @@
+@mixin desde($medida){
+    @media screen and (min-width:$medida) {
+        @content;
+    }
+}

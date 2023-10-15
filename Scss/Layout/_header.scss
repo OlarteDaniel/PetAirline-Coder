@@ -1,0 +1,279 @@
+@import '../Utilities/variables';
+
+@import '../Breakpoints/medidas';
+
+@mixin imagen($ancho,$alto){
+    width: $ancho;
+    height: $alto;
+    transition: all 0.3s;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    transition: .7s;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5px;
+    z-index: 1;
+
+    .logo{
+        display: flex;
+        cursor: pointer;
+
+        img{
+            @include imagen(2em,2em);
+
+            &:hover{
+                transform: scale(1.2); 
+            }
+        }
+    }
+
+    .perfil{
+        cursor: pointer;
+
+        img{
+            @include imagen(2em,2em);
+
+            &:hover{
+                transform: scale(1.2); 
+            }
+        }
+    }
+
+    .perfilf{
+        display: none;
+        margin: 15px 0;
+        z-index: 2;
+        cursor: pointer;
+
+        img{
+            @include imagen(2em,2em);
+
+            &:hover{
+                transform: scale(1.2); 
+            }
+        }
+    }
+
+    .nav {
+        position: absolute;
+        height: 100vh;
+        opacity: 0;
+        visibility: hidden; 
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        top: 0;
+        right: -280px;
+        background-color: #0a1e38;
+        padding: 2em;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+        transition: 1s;
+
+        .cabecera{
+            position: absolute;
+            padding: 15px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-list {
+            margin-top: 20%;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 2em;
+
+            li{
+                &:hover{
+                    transform: scale(1.1); 
+                    transition: all .3s;
+                }
+
+                a{
+                    position: relative;
+                    margin: 0 15px; 
+                    text-decoration: none;
+                    color: #898c8d;
+                    letter-spacing: 2px; 
+                    font-weight: 600;
+                    transition: 0.7s;
+
+                    &:hover{
+                        color: $amarillo;
+                        transition: all .3s;
+                    }
+                }
+            }
+        }
+    }
+
+    .abrir-menu {
+        display: block;
+        border: 0;
+        font-size: 1rem;
+        background-color: transparent;
+        cursor: pointer;
+    
+        i{
+            font-size: 2em;
+            color: #ececec;
+            transition: .1s;
+
+            &:hover{
+                font-size: 2.2em;
+                color: $amarillo;
+            }
+        }
+    }
+
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1rem;
+        background-color: transparent;
+        cursor: pointer;
+    
+        i{
+            font-size: 2em;
+            color: #ececec;
+            transition: .1s;
+
+            &:hover{
+                font-size: 2.2em;
+                color: #721009;
+            }
+        }
+    }
+
+    &.abajo{
+        background-color: $azul;
+        padding: 15px 10px; 
+
+        .nav-list{
+            li{
+                a{
+                    color: #ecececec;
+                }
+            }
+        }
+    }
+
+    .nav.visible {
+        opacity: 1;
+        transform: translate(-280px, 0);
+        visibility: visible;
+    }
+}
+
+// ---------- TABLET ----------
+
+@include desde(480px){
+    header{
+        padding: 30px 10px;
+
+        &.abajo{
+            padding: 25px 15px;
+        }
+    }
+}
+
+// ---------- TABLET ----------
+
+// ----- TABLET DE COSTADO ----
+
+@include desde(768px){
+    header{
+        &.abajo{
+            padding: 30px 10px;
+        }
+
+        .logo{
+            z-index: 2;
+        }
+
+        .abrir-menu,
+        .cerrar-menu {
+            display: none;
+        }
+
+        .nav{
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+            background-color: transparent;
+            box-shadow: none;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .perfil{
+                display: none;
+            }
+
+            .nav-list{
+                position: absolute;
+                margin: 0;
+                gap: 1rem;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center; 
+
+                li{
+                    a{
+                        margin: 0; 
+                        font-size: .7em;
+                    }
+                }
+            }
+        }
+
+        .perfilf{
+            display: flex;
+        }
+    }
+}
+
+// ----- TABLET DE COSTADO ----
+
+// --------- NOTEBOOK ---------
+
+@include desde(1024px){
+    header{
+        padding: 30px 20px;
+        &.abajo{
+            padding: 40px 35px;
+        }
+    }
+}
+
+// --------- NOTEBOOK ---------
+
+// -------- ESCRITORIO --------
+
+@include desde(1200px){
+    header{
+        padding: 40px 25px;
+        &.abajo{
+            padding: 45px 35px;
+        }
+        .nav{
+            .nav-list{
+                margin: 0 20px;
+            }
+        }
+    }
+}
+
+// -------- ESCRITORIO --------

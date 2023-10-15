@@ -1,0 +1,59 @@
+@import '../Breakpoints/medidas';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color: #e4fbfb;
+}
+
+body header p, body main p, body footer p{
+    padding: 0;
+    margin: 0;
+}
+
+// ---------- TABLET ----------
+
+@include desde(480px){
+    *{
+        font-size: 30px;
+    }
+}
+
+// ---------- TABLET ----------
+
+// ----- TABLET DE COSTADO ----
+
+@include desde(768px){
+    *{
+        font-size: 40px;
+    }
+}
+
+// ----- TABLET DE COSTADO ----
+
+// --------- NOTEBOOK ---------
+
+@include desde(1024px){
+    *{
+        font-size: 45px;
+    }
+}
+
+// --------- NOTEBOOK ---------
+
+// -------- ESCRITORIO --------
+
+@include desde(1200px){
+    *{
+        font-size: 60px;
+    }
+}
+
+// -------- ESCRITORIO --------
+

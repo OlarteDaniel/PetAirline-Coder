@@ -1,0 +1,18 @@
+@import '../Utilities/variables';
+
+@mixin button-style($ancho,$alto,$bg1:#154580,$bg2:#206b9a){
+    position: relative;
+    width: $ancho;
+    height: $alto;
+    background: linear-gradient(0deg,$bg1,$bg2);
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover{
+        transform: scale(1.2);
+        color: $amarillo;
+    }
+}

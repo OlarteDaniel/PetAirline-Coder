@@ -1,0 +1,133 @@
+@import '../Utilities/variables';
+
+@import '../Breakpoints/medidas';
+
+@mixin formato($size , $color){
+    font-size: $size;
+    color: $color;
+}
+
+.pie{
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-top: 1px solid #04152b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    background-color: $azul;
+
+    .ubicacion,.contactos,.preguntas{
+        padding: 5px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .contactos{
+        a{
+            padding: 0 .6em;
+            font-size: 20px;
+
+            &#whatsapp{
+                &:hover i{
+                    @include formato(1.2em,#128C7E);
+                }
+            }
+
+            &#instagram{
+                &:hover i{
+                    @include formato(1.2em,#C13584);
+                }
+            }
+
+            &#github{
+                &:hover i{
+                    @include formato(1.2em,#171515);
+                }
+            }
+
+            i{
+                @include formato(1em,#fff);
+                transition: .3s;
+            }
+        }
+    }
+
+    p{
+        &:not(#dire){
+            @include formato(1.2em,$amarillo);
+            padding: 5px;
+            font-weight: 600;
+        }
+
+        &#dire{
+            @include formato(1em,#fff);
+        }
+    }
+
+    a{
+        &#link{
+            @include formato(1em,#fff);
+            text-decoration: none;
+        }
+    }
+}
+
+// ---------- TABLET ----------
+
+@include desde(480px){
+    .pie{
+        position: relative;;
+        height: fit-content;
+        padding: 30px;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .ubicacion, .contactos, .preguntas{
+            padding: 0;
+        }
+    }
+}
+
+// ---------- TABLET ----------
+
+// ----- TABLET DE COSTADO ----
+
+@include desde(768px){
+    .pie{
+        font-size: 30px;
+    
+        .ubicacion, .contactos, .preguntas{
+            font-size: 1em;
+        }
+    
+        .contactos{
+            a{
+                font-size: 1em;
+            }
+        }
+    }    
+}
+
+// ----- TABLET DE COSTADO ----
+
+// --------- NOTEBOOK ---------
+
+@include desde(1024px){
+    .pie{
+        font-size: 35px;
+    }
+}
+
+// --------- NOTEBOOK ---------
+
+// -------- ESCRITORIO --------
+
+@include desde(1200px){
+    .pie{
+        font-size: 40px;
+    }
+}
+
+// -------- ESCRITORIO --------
