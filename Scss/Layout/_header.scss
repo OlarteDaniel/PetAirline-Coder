@@ -103,7 +103,7 @@ header{
                     position: relative;
                     margin: 0 15px; 
                     text-decoration: none;
-                    color: #898c8d;
+                    color: #ececec;
                     letter-spacing: 2px; 
                     font-weight: 600;
                     transition: 0.7s;
@@ -117,7 +117,7 @@ header{
         }
     }
 
-    .abrir-menu {
+    .abrir-menu,.cerrar-menu {
         display: block;
         border: 0;
         font-size: 1rem;
@@ -129,6 +129,10 @@ header{
             color: #ececec;
             transition: .1s;
 
+        }
+    }
+    .abrir-menu {
+        i{
             &:hover{
                 font-size: 2.2em;
                 color: $amarillo;
@@ -137,17 +141,7 @@ header{
     }
 
     .cerrar-menu {
-        display: block;
-        border: 0;
-        font-size: 1rem;
-        background-color: transparent;
-        cursor: pointer;
-    
         i{
-            font-size: 2em;
-            color: #ececec;
-            transition: .1s;
-
             &:hover{
                 font-size: 2.2em;
                 color: #721009;
@@ -162,7 +156,7 @@ header{
         .nav-list{
             li{
                 a{
-                    color: #ecececec;
+                    color: #ececec;
                 }
             }
         }

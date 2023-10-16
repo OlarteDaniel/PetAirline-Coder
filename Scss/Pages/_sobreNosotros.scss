@@ -1,0 +1,198 @@
+@import '../Utilities/variables';
+
+@import '../Components/button';
+
+@import '../Breakpoints/medidas';
+
+.sobre_nosotros{
+    padding: 5px;
+
+    .heading{
+        width: 100%;
+        height: 2rem;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+        h1{
+            font-size: 1em;
+            font-weight: 600;
+            color: #171515;
+            border-bottom: 3px solid $amarillo;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .somos,.equipo,.historia{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 1500px;
+        margin: auto;
+        margin-top: 1rem;
+        padding: 10px;
+        background-color: #aad8e4;
+        border-radius: 10px;
+        font-size: 25px;
+
+        img{
+            border-radius: 5px;
+            border: .5px solid black;
+        }
+
+        .texto{
+            width: fit-content;
+            padding: 5px 10px;
+            display: flex;
+            flex-direction: column;
+            font-size: 1em;
+            font-weight: 500;
+            background-color: #7cb9c3;
+            gap: .1em;
+            border-radius: 5px;
+
+            .subtitulo{
+                font-size: 1em;
+            }
+
+            .descripcion{
+                font-size: .6em;
+                
+                .oculto{
+                    font-size: 1em;
+                    display: none
+                }
+
+                .mostrar{
+                    display: block;
+                }
+            }
+
+            .mas{
+                @include button-style(fit-content,fit-content);
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+
+// ---------- TABLET ----------
+
+@include desde(480px){
+    .sobre_nosotros{
+
+        .heading{
+            font-size: 45px;
+        }
+
+        .somos,.equipo,.historia{
+            font-size: 35px;
+
+            .texto{
+
+                .mas{
+                    font-size: 20px;
+                }
+            }
+        }
+
+        
+    }
+}
+
+// ---------- TABLET ----------
+
+// ----- TABLET DE COSTADO ----
+
+@include desde(768px){
+    .sobre_nosotros{
+
+        .heading{
+            padding-top: 0px;
+            font-size: 60px;
+        }
+
+        img{
+            max-width: 350px;
+            max-height: 230px;
+        }
+
+        .somos,.equipo,.historia{
+            font-size: 35px;
+            flex-direction: row;
+
+            .texto{
+                display: flex;
+                flex-direction: column;
+                align-items: self-start;
+            }
+        }
+
+        .equipo{
+            flex-direction: row-reverse;
+        }
+    } 
+}
+
+// ----- TABLET DE COSTADO ----
+
+// --------- NOTEBOOK ---------
+
+@include desde(1024px){
+    .sobre_nosotros{
+
+        img{
+            max-width: 450px;
+            max-height: 300px;
+        }
+
+        .somos,.equipo,.historia{
+            font-size: 40px;
+
+            .texto{
+
+                .mas{
+                    font-size: 30px;
+                }
+            }
+        }
+
+    }
+}
+
+// --------- NOTEBOOK ---------
+
+// -------- ESCRITORIO --------
+
+@include desde(1200px){
+    .sobre_nosotros{
+
+        .heading{
+            font-size: 70px;
+        }
+
+        img{
+            max-width: 500px;
+        }
+
+        .somos,.equipo,.historia{
+
+            .texto{
+
+                .descripcion{
+                    .oculto{
+                        display: block;
+                    }
+                }
+
+                .mas{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// -------- ESCRITORIO --------
