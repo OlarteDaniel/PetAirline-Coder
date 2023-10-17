@@ -3,3 +3,9 @@
         @content;
     }
 }
+
+@mixin desdea($medida){
+    @media screen  and (max-height:$medida){
+        @content;
+    }
+}

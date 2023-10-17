@@ -1,0 +1,35 @@
+
+
+@mixin input(){
+    .inputbox{
+        font-size: .6em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        label{
+            align-self: self-start;
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        input{
+            width: 100%;
+            padding: 5px;
+            outline: none;
+            font-size: 1em;
+            color: #fff;
+            border-radius: 5px;
+            background: rgba(143, 184, 192, 0.8);
+            box-shadow: inset 0 0 15px rgba(129, 171, 178, 0.75);
+            border: 1px solid rgba(85, 119, 125, 0.5);
+        }
+
+        &::placeholder{
+            color: rgba(85, 119, 125, 0.5);
+        }
+
+        @content;
+    }
+}

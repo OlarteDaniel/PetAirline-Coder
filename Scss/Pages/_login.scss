@@ -1,0 +1,145 @@
+@import '../Utilities/variables';
+@import '../Utilities/mixin';
+
+@import '../Components/input';
+@import '../Components/button';
+
+@import '../Breakpoints/medidas';
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 35px;
+
+    @include titulo();
+
+    .contenedor{
+        font-size: 1em;
+        display: flex;
+
+        .img-login{
+            display: none;
+        }
+
+        .formulario{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color :$celeste1;
+            padding: 5px;
+            margin-top: 10px;
+            gap: 20px;
+            border: 2px solid $celeste2;
+            border-radius: 20px;
+            font-size: 1em;
+            
+            img{
+                max-width: 200px;
+            }
+
+            h2{
+                text-align: center;
+                font-size: 1em;
+                font-weight: 600;
+                margin-bottom: 10px;
+                border-bottom: solid 1.5px #fff;
+            }
+
+            @include input(){
+                #btn{
+                    @include button-style(60%,"",#24597c,#217697,1em);
+                }
+            };
+
+            p{
+                font-size: .5em;
+
+                a{
+                    font-size: 1em;
+                }
+            }
+
+        }
+    }
+}
+
+// ---------- TABLET ----------
+
+@include desde(480px){
+    .login{
+        font-size: 40px;
+
+        .contenedor{
+
+            .formulario{
+                padding:10px;
+            }
+        }
+    }
+}
+
+// ---------- TABLET ----------
+
+// ----- TABLET DE COSTADO ----
+
+@include desde(768px){
+    .login{
+        font-size: 50px;
+
+        .contenedor{
+
+            .formulario{
+                margin-top: 20px;
+                padding: 30px;
+            }
+        }
+    }
+}
+
+// ----- TABLET DE COSTADO ----
+
+// --------- NOTEBOOK ---------
+
+@include desde(1024px){
+    .login{
+        font-size: 40px;
+
+        .contenedor{
+            padding: 10px;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+
+            .img-login{
+                display: block;
+                width: 60%;
+                max-width: 1000px;
+                max-height: 620px;
+                border: 1px solid #0a1e38;
+                border-radius: 10px;
+            }
+
+            .formulario{
+                padding: 15px;
+            }
+        }
+    }
+}
+
+// --------- NOTEBOOK ---------
+
+// -------- ESCRITORIO --------
+
+@include desde(1200px){
+    .login{
+        font-size: 45px;
+
+        .contenedor{
+            justify-content: space-evenly;
+        }
+    }
+}
+
+// -------- ESCRITORIO --------

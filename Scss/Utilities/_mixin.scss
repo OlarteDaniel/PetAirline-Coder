@@ -1,0 +1,42 @@
+@import '../Breakpoints/medidas';
+
+@mixin titulo(){
+    .heading{
+        width: 100%;
+        height: 2rem;
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+
+        h1{
+            font-size: 1em;
+            font-weight: 600;
+            color: #171515;
+            border-bottom: 3px solid $amarillo;
+            margin-bottom: .5rem;
+        }
+    }
+
+    @include desde(480px){
+        .heading{
+            font-size: 45px;
+        }
+    }
+    
+    @include desde(768px){
+        .heading{
+            padding-top: 0px;
+            font-size: 60px;
+        }  
+    }
+    
+    @include desde(1200px){
+            .heading{
+                font-size: 70px;
+            } 
+    }
+}
+
+

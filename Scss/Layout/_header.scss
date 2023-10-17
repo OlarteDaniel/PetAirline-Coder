@@ -271,3 +271,18 @@ header{
 }
 
 // -------- ESCRITORIO --------
+
+// -------- EXCEPCION ---------
+@include desdea(360px){
+    header{
+        .nav {
+
+            .nav-list {
+                margin-top: 10%;
+                gap: 1em;
+            }
+        }
+    }
+    
+}
+// -------- EXCEPCION ---------

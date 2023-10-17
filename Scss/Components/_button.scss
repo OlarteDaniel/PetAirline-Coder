@@ -1,6 +1,6 @@
 @import '../Utilities/variables';
 
-@mixin button-style($ancho,$alto,$bg1:#154580,$bg2:#206b9a,$fsize:16px){
+@mixin button-style($ancho:fit-content,$alto:fit-content,$bg1:#154580,$bg2:#206b9a,$fsize:16px){
     position: relative;
     width: $ancho;
     height: $alto;
@@ -10,6 +10,7 @@
     box-shadow: none;
     cursor: pointer;
     font-size: $fsize;
+    font-weight: 500;
     color: #ececec;
     transition: .3s;
 
