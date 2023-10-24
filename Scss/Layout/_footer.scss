@@ -48,7 +48,7 @@
             }
 
             i{
-                @include formato(1em,#fff);
+                @include formato(1em,$blanco);
                 transition: .3s;
             }
         }
@@ -62,13 +62,13 @@
         }
 
         &#dire{
-            @include formato(1em,#fff);
+            @include formato(1em,$blanco);
         }
     }
 
     a{
         &#link{
-            @include formato(1em,#fff);
+            @include formato(1em,$blanco);
             text-decoration: none;
         }
     }

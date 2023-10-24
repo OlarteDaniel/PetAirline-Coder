@@ -24,7 +24,7 @@
 
         img{
             border-radius: 5px;
-            border: .5px solid black;
+            border: .5px solid $negro;
         }
 
         .texto{
@@ -40,10 +40,12 @@
 
             .subtitulo{
                 font-size: 1em;
+                color: $negro;
             }
 
             .descripcion{
                 font-size: .6em;
+                color: $negro;
                 
                 .oculto{
                     font-size: 1em;

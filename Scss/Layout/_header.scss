@@ -9,6 +9,7 @@
 }
 
 header{
+    
     position: fixed;
     width: 100%;
     display: flex;
@@ -33,7 +34,6 @@ header{
 
     .perfil{
         cursor: pointer;
-
         img{
             @include imagen(2em,2em);
 
@@ -68,7 +68,7 @@ header{
         align-items: end;
         top: 0;
         right: -280px;
-        background-color: #0a1e38;
+        background-color: $azul2;
         padding: 2em;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
         transition: 1s;
@@ -103,7 +103,7 @@ header{
                     position: relative;
                     margin: 0 15px; 
                     text-decoration: none;
-                    color: #ececec;
+                    color: $blanco;
                     letter-spacing: 2px; 
                     font-weight: 600;
                     transition: 0.7s;
@@ -126,7 +126,7 @@ header{
     
         i{
             font-size: 2em;
-            color: #ececec;
+            color: $blanco;
             transition: .1s;
 
         }
@@ -150,13 +150,13 @@ header{
     }
 
     &.abajo{
-        background-color: $azul;
+        background-color: transparentize($azul,0.20);
         padding: 15px 10px; 
 
         .nav-list{
             li{
                 a{
-                    color: #ececec;
+                    color: $blanco;
                 }
             }
         }
@@ -218,7 +218,8 @@ header{
 
             .nav-list{
                 position: absolute;
-                margin: 0;
+                margin: 0 !important;
+                padding: 0 !important;
                 gap: 1rem;
                 flex-direction: row;
                 justify-content: center;
@@ -273,13 +274,13 @@ header{
 // -------- ESCRITORIO --------
 
 // -------- EXCEPCION ---------
-@include desdea(360px){
+@include desdea(400px){
     header{
         .nav {
 
             .nav-list {
                 margin-top: 10%;
-                gap: 1em;
+                gap: .8em;
             }
         }
     }

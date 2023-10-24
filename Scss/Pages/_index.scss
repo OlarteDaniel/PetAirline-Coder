@@ -84,8 +84,8 @@
 @include desde(768px){
     .index{
         .fondo_Index{
-            min-height: 580px;
-            max-height: 620px;
+            min-height: 600px;
+            max-height: 650px;
         }
 
         .comenzar{
@@ -105,10 +105,8 @@
         .fondo_Index{
             width: 100%;
             height: 100%;
-            min-width: none;
-            max-width: none;
-            min-height: 620px;
-            max-height: 640px;
+            min-height: 650px;
+            max-height: 700px;
         }
     }
 }
@@ -120,10 +118,8 @@
 @include desde(1200px){
     .index{
         .fondo_Index{
-            min-width: none;
-            max-width: none;
             min-height: 800px;
-            max-height: 840px;
+            max-height: 850px;
         }
 
         .comenzar{

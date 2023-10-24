@@ -1,4 +1,4 @@
-
+@import '../Utilities/variables';
 
 @mixin input(){
     .inputbox{
@@ -11,6 +11,7 @@
         label{
             align-self: self-start;
             font-size: 1em;
+            color: $negro;
             font-weight: 600;
         }
 
@@ -19,15 +20,15 @@
             padding: 5px;
             outline: none;
             font-size: 1em;
-            color: #fff;
+            color: $blanco;
             border-radius: 5px;
-            background: rgba(143, 184, 192, 0.8);
-            box-shadow: inset 0 0 15px rgba(129, 171, 178, 0.75);
-            border: 1px solid rgba(85, 119, 125, 0.5);
-        }
+            background: rgba(#79ddff,.8);
+            box-shadow: inset 0 0 15px rgba(#32cdfe,.75);
+            border: 1px solid rgba(#07b7f0,.5);
 
-        &::placeholder{
-            color: rgba(85, 119, 125, 0.5);
+            &::placeholder{
+                color: rgba(#07b7f0,.75);
+            }
         }
 
         @content;

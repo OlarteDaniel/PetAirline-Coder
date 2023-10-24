@@ -1,0 +1,450 @@
+@import '../Utilities/variables';
+@import '../Utilities/mixin';
+
+@import '../Components/input';
+
+@import '../Breakpoints/medidas';
+
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    
+    @include titulo();
+
+    .contenedor-grid{
+        margin-top: 10px;
+        width: 100%;
+        font-size: 1em;
+        display: grid;
+        justify-content: center;
+
+        .caja{
+            width: 100%;
+            height: fit-content;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+
+            .subtitulo{
+                font-size: 1em;
+                align-self: flex-start;
+
+                h2{
+                    font-style: italic;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                }
+            }
+        }
+
+
+        .comentarios{ 
+            align-items: center;
+
+            .contenedor-carrusel{
+                position: relative;
+                width: 90vw;
+                height: fit-content;
+                overflow: hidden;
+                font-size: 1em;
+
+                .carrusel{
+                    width: 400%;
+                    height: 100%;
+                    display: flex;
+                    font-size: 1em;
+
+                    .usuario{
+                        width: calc(100% / 4);
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        font-size: 1em;
+                        
+                        .img{
+                            width: 100%;
+                            height: 100%;
+                            max-width: 200px;
+                            max-height: 150px;
+                            display: flex;
+                            justify-content: center;
+
+                            img{
+                                width: 70%;
+                                border-radius: 50%;
+                                border: 1px solid $negro;
+                            }
+                        }
+                        
+                        p{
+                            font-size: .9em;
+                            color: $negro;
+                        }
+
+                        .estrellas{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 1em;
+                            gap: .2em;
+
+                            i{
+                                &.star{
+                                    font-size: 1em;
+                                    color: $amarillo;
+                                }
+                            }
+                        }
+    
+                        .opinion{
+                            width: 100%;
+                            max-width: 350px;
+                            position: relative;
+                            margin-top: 10px;
+                            padding: 5px;
+                            font-size: 1em;
+                            background-color: $blanco  ;
+                            border-radius: 10px;
+    
+                            &::before{
+                                content: "";
+                                border-left: 10px solid transparent;
+                                border-right: 10px solid transparent;
+                                border-bottom: 10px solid $blanco;
+                                position: absolute;
+                                top: -10px;
+                                left: 50%;
+                                transform: translateX(-50%);                            
+                            }
+                            
+                            p{
+                                font-size: .6em;
+                            }
+                        }
+                    }
+                }
+
+                .btn-izquierda,
+                .btn-derecha{
+                    display: flex;
+                    position: absolute;
+                    top: 50%;
+                    font-size: 1.5rem;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    padding: 5px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    color: $negro;
+                    transform: translate(0,-50%);
+                    transition: .5s ease;
+                    user-select: none;
+
+                    &:hover{
+                        background-color: #b0e0e6;
+                        color: rgba($negro,.5);
+                    }
+                }
+
+                .btn-izquierda{
+                    left: 10px;
+                }
+
+                .btn-derecha{
+                    right: 10px;
+                }
+            }
+        }
+
+
+        .valoraciones{
+
+            .contenedor-puntuacion{
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                font-size: 1em;
+
+                .numeros{
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    font-size: 1em;
+
+                    .promedio{
+                        align-self: center;
+                        font-size: 2.5em;
+                        font-weight: 600;
+                    }
+
+                    .estrellas{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: .7em;
+                        gap: .2em;
+
+                        i{
+                            font-size: 1em;
+                            &.star{
+                                font-size: 1em;
+                                color: $amarillo;
+                            }
+                        }
+                    }
+
+                    .total{
+                        font-size: .8em;
+                    }
+                }
+
+                .estadisticas{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: .1em;
+
+                    .progress{
+                        height: 15%;
+                        min-height: 15px;
+                        max-height: 45px;
+                    }
+                }
+            }
+        }
+
+        .experiencias{
+            margin: 0;
+            .contenedor-opinion{
+                display: flex;
+                flex-direction: column;
+
+                p{
+                    padding: 5px;
+                    font-size: .8em;
+                    font-weight: 600;
+                }
+
+                .estrellas{
+                    padding-left: 6px;
+                    color: $blanco;
+                    font-size: .9em;
+                    cursor: pointer;
+
+                    .star{
+                        
+                        &.checked
+                        {
+                            color: $amarillo;
+                        }
+                    }
+
+                }
+
+                .formulario{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 5px;
+                    gap:10px;
+                    font-size: 1em;
+
+                    @include input(){
+                        height: 100%;
+
+                        textarea{
+                            width: 100%;
+                            height: 15vh;
+                            min-height: 120px;
+                            max-height: 150px;
+                            border: 1px solid $negro
+                        }
+
+                        #btn{
+                            @include button-style(60%,"",#30a6ff,#57c4ff,1.2em);
+                            max-width: 180px;
+                            align-self:flex-end; 
+                        }
+                    };
+                }
+
+            }
+        }
+        
+    }
+}
+
+
+// ---------- TABLET ----------
+
+@include desde(480px){
+    .experiencia{
+
+        .contenedor-grid{
+            margin-top: 20px;
+
+            .comentarios{
+
+                .contenedor-carrusel{
+
+                    .carrusel{
+                        width: 200%;
+
+                    }
+
+                    .btn-izquierda,
+                    .btn-derecha{
+                        top: 40%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ---------- TABLET ----------
+
+
+// ----- TABLET DE COSTADO ----
+
+@include desde(768px){
+    .experiencia{
+
+        .contenedor-grid{
+
+            .comentarios{
+
+                .contenedor-carrusel{
+
+                    .carrusel{
+
+                        .usuario{
+
+                            .img{
+                                max-width: 250px;
+                                max-height: 180px;
+                            }
+
+                            .estrellas{
+    
+                                i{
+                                    font-size: .7em;
+
+                                    &.star{
+                                        font-size: .7em;
+                                    }
+                                }
+                            }
+
+                            .opinion{
+                                max-width: 420px;
+                                margin-top: 5px;
+                                
+                                p{
+                                    font-size: .5em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ----- TABLET DE COSTADO ----
+
+
+// --------- NOTEBOOK ---------
+
+@include desde(1024px){
+    .experiencia{
+
+        .contenedor-grid{
+            margin-top: 15px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+
+
+            .comentarios{
+                grid-column: 1/4;
+                .contenedor-carrusel{
+
+                    .carrusel{
+                        width: 135%;
+
+                        .usuario{
+
+                            .estrellas{
+    
+                                i{
+                                    font-size: .7em;
+
+                                    &.star{
+                                        font-size: .7em;
+                                    }
+                                }
+                            }
+
+                            .opinion{
+                                max-width: 420px;
+                                margin-top: 5px;
+                                
+                                p{
+                                    font-size: .4em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .valoraciones{
+                padding-right: 10px;
+            }
+
+            .experiencias{
+                width: 50vw;
+                padding: 10px;
+
+                .contenedor-opinion{
+    
+                    .formulario{
+    
+                        @include input(){
+    
+                            #btn{
+                                max-width: 250px;
+                            }
+                        };
+                    }
+    
+                }
+            }
+
+
+        }
+    }
+}
+
+// --------- NOTEBOOK ---------
+
+
+// -------- ESCRITORIO --------
+
+@include desde(1200px){
+    .experiencia{
+
+        .contenedor-grid{
+            margin-top: 10px;
+        }
+    }
+    
+}
+
+// -------- ESCRITORIO --------

@@ -5,7 +5,7 @@
 }
 
 @mixin desdea($medida){
-    @media screen  and (max-height:$medida){
+    @media screen  and (max-height:$medida) and (max-width:767px){
         @content;
     }
 }
