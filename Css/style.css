@@ -111,6 +111,7 @@ header .nav .cabecera {
   align-items: center;
 }
 header .nav .nav-list {
+  padding: 0;
   margin-top: 20%;
   list-style-type: none;
   display: flex;
@@ -749,8 +750,8 @@ header .nav.visible {
 }
 .experiencia .contenedor-grid .comentarios .contenedor-carrusel .btn-izquierda:hover,
 .experiencia .contenedor-grid .comentarios .contenedor-carrusel .btn-derecha:hover {
-  background-color: #b0e0e6;
-  color: rgba(0, 19, 31, 0.5);
+  background-color: #8ddbff;
+  color: #eef9ff;
 }
 .experiencia .contenedor-grid .comentarios .contenedor-carrusel .btn-izquierda {
   left: 10px;

@@ -41,4 +41,34 @@
     }
 }
 
+@mixin grid(){
+    .contenedor-grid{
+        margin-top: 10px;
+        width: 100%;
+        font-size: 1em;
+        display: grid;
+        justify-content: center;
+
+        .caja{
+            width: 100%;
+            height: fit-content;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+
+            .subtitulo{
+                font-size: 1em;
+                align-self: flex-start;
+
+                h2{
+                    font-style: italic;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                }
+            }
+        }
+        @content;
+    }
+}
+
 
