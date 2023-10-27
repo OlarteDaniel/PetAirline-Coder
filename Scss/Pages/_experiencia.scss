@@ -10,10 +10,13 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    
     @include titulo();
 
     @include grid(){
+
+        .caja{
+            padding: 10px 0;
+        }
 
         .comentarios{ 
             align-items: center;
@@ -64,6 +67,8 @@
 
 
         .valoraciones{
+            border-top: 1px solid $negro;
+            border-bottom: 1px solid $negro;
 
             .contenedor-puntuacion{
                 display: grid;
@@ -256,6 +261,11 @@
                     }
                 }
             }
+
+            .valoraciones{
+                border-top: 2px solid $negro;
+                border-bottom: 2px solid $negro;
+            }
         }
     }
 }
@@ -276,6 +286,7 @@
 
             .comentarios{
                 grid-column: 1/4;
+                border-bottom: 2px solid $negro;
                 .contenedor-carrusel{
 
                     .carrusel{
@@ -309,6 +320,8 @@
 
             .valoraciones{
                 padding-right: 10px;
+                border: none;
+                border-right: 2px solid $negro;
             }
 
             .experiencias{

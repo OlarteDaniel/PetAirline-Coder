@@ -44,174 +44,208 @@
     <!------------------------------- MAIN ------------------------------>
 
     <main class="vuelo">
+        <form action="">
 
-        <div class="heading">
-            <h1>Comprar Boletos</h1>
-        </div>
+            <div class="heading">
+                <h1>Comprar Boletos</h1>
+            </div>
 
-        <div class="contenedor-grid">
+            <div class="contenedor-grid">
 
         <!-------------- SECCION BOLETO ------------>
 
-            <div class="caja boleto">
+                <div class="caja boleto">
 
-                <div class="subtitulo">
-                    <h2>Pet Airline</h2>
+                    <div class="subtitulo">
+                        <h2>Pet Airline</h2>
+                    </div>
+
+                    <div class="formulario">
+
+                        <div class="inputbox">
+                            <label>Origen</label>
+                            <input type="text" name="" id="origen" placeholder="Argentina">
+                        </div>
+
+                        <div class="inputbox">
+                            <label>Destino</label>
+                            <input type="text" name="" id="destino" placeholder="Uruguay">
+                        </div>
+
+                        <div class="inputbox fechas">
+
+                            <div class="fsalida">
+                                <label>Salida</label>
+                                <input type="date" name="" id="salida">
+                            </div>
+                            
+                            <div class="fregreso">
+                                <label>Regreso</label>
+                                <input type="date" name="" id="regreso">
+                            </div>
+                            
+                        </div>
+
+                        <div class="inputbox">
+                            <label>Clase</label>
+                            <select name="" id="">
+                                <option value="">Primera Clase</option>
+                                <option value="">Clase Ejecutiva</option>
+                                <option value="">Clase Economica Premium</option>
+                                <option value="">Clase Economica</option>
+                            </select>
+                        </div>
+
+                        <div class="inputbox cantidad">
+
+                            <div class="canadultos">
+                                <label>Adultos</label>
+                                <input type="number" name="" id="adulto" min="0">
+                            </div>
+                            
+                            <div class="canninios">
+                                <label>Niños</label>
+                                <input type="number" name="" id="ninio" min="0">
+                            </div>
+                            
+                            <div class="canbebes">
+                                <label>Bebes</label>
+                                <input type="number" name="" id="bebe" min="0">
+                            </div>
+                            
+                        </div>
+
+                    </div>
                 </div>
-
-                <form action="#" class="formulario">
-
-                    <div class="inputbox">
-                        <label>Origen</label>
-                        <input type="text" name="" id="origen" placeholder="Argentina">
-                    </div>
-
-                    <div class="inputbox">
-                        <label>Destino</label>
-                        <input type="text" name="" id="destino" placeholder="Uruguay">
-                    </div>
-
-                    <div class="inputbox fechas">
-
-                        <div class="fsalida">
-                            <label>Salida</label>
-                            <input type="date" name="" id="salida">
-                        </div>
-                        
-                        <div class="fregreso">
-                            <label>Regreso</label>
-                            <input type="date" name="" id="regreso">
-                        </div>
-                        
-                    </div>
-
-                    <div class="inputbox">
-                        <label>Clase</label>
-                        <select name="" id="">
-                            <option value="">Primera Clase</option>
-                            <option value="">Clase Ejecutiva</option>
-                            <option value="">Clase Economica Premium</option>
-                            <option value="">Clase Economica</option>
-                        </select>
-                    </div>
-
-                    <div class="inputbox cantidad">
-
-                        <div class="canadultos">
-                            <label>Adultos</label>
-                            <input type="number" name="" id="adulto" min="0">
-                        </div>
-                        
-                        <div class="canninios">
-                            <label>Niños</label>
-                            <input type="number" name="" id="ninio" min="0">
-                        </div>
-                        
-                        <div class="canbebes">
-                            <label>Bebes</label>
-                            <input type="number" name="" id="bebe" min="0">
-                        </div>
-                        
-                    </div>
-
-                </form>
-            </div>
 
         <!-------------- SECCION BOLETO ------------>
 
 
         <!------------- SECCION CAPITANES ---------->
 
-            <div class="caja capitanes">
+                <div class="caja capitanes">
 
-                <div class="subtitulo">
-                    <h2>Elija Capitan</h2>
-                </div>
+                    <div class="subtitulo">
+                        <h2>Elija Capitan</h2>
+                    </div>
 
-                <div class="contenedor-carrusel">
+                    <div class="contenedor-carrusel">
 
-                    <div class="carrusel">
+                        <div class="carrusel">
 
-                        <div class="capitan">
+                            <div class="capitan">
 
-                            <div class="img">
-                                <img src="../Assets/Img/Capitan N1.png" alt="Capitan Firulais">
-                            </div>
-                            <p>Capitan Firulais</p>
-                            <div class="datos">
-                                <ul>
-                                    <li>Nombre:</li>
-                                    <li>Animal:</li>
-                                    <li>Raza:</li>
-                                    <li>Edad:</li>
-                                </ul>
+                                <div class="img">
+                                    <img src="../Assets/Img/Capitan N1.png" alt="Capitan Firulais">
+                                </div>
+                                <p>Capitan Firulais</p>
+                                <div class="datos">
+                                    <ul>
+                                        <li>Nombre:</li>
+                                        <li>Animal:</li>
+                                        <li>Raza:</li>
+                                        <li>Edad:</li>
+                                    </ul>
+                                </div>
+
                             </div>
 
                         </div>
 
+                        <div class="btn-izquierda"><i class="bi bi-caret-left-fill"></i></div>
+                        <div class="btn-derecha"><i class="bi bi-caret-right-fill"></i></div>
+
                     </div>
 
-                    <div class="btn-izquierda"><i class="bi bi-caret-left-fill"></i></div>
-                    <div class="btn-derecha"><i class="bi bi-caret-right-fill"></i></div>
-
                 </div>
-
-            </div>
 
         <!------------- SECCION CAPITANES ---------->
 
 
         <!------------- SECCION AZAFATAS ----------->
 
-            <div class="caja azafatas">
-                <div class="subtitulo">
-                    <h2>Elija Azafata</h2>
-                </div>
+                <div class="caja azafatas">
+                    <div class="subtitulo">
+                        <h2>Elija Azafata</h2>
+                    </div>
 
-                <div class="contenedor-carrusel">
+                    <div class="contenedor-carrusel">
 
-                    <div class="carrusel">
+                        <div class="carrusel">
 
-                        <div class="azafata">
+                            <div class="azafata">
 
-                            <div class="img">
-                                <img src="../Assets/Img/Azafata N1.png" alt="Capitan Firulais">
-                            </div>
-                            <p>Azafata Michi</p>
-                            <div class="datos">
-                                <ul>
-                                    <li>Nombre:</li>
-                                    <li>Animal:</li>
-                                    <li>Raza:</li>
-                                    <li>Edad:</li>
-                                </ul>
+                                <div class="img">
+                                    <img src="../Assets/Img/Azafata N1.png" alt="Capitan Firulais">
+                                </div>
+                                <p>Azafata Michi</p>
+                                <div class="datos">
+                                    <ul>
+                                        <li>Nombre:</li>
+                                        <li>Animal:</li>
+                                        <li>Raza:</li>
+                                        <li>Edad:</li>
+                                    </ul>
+                                </div>
+
                             </div>
 
                         </div>
 
+                        <div class="btn-izquierda"><i class="bi bi-caret-left-fill"></i></div>
+                        <div class="btn-derecha"><i class="bi bi-caret-right-fill"></i></div>
+
                     </div>
-
-                    <div class="btn-izquierda"><i class="bi bi-caret-left-fill"></i></div>
-                    <div class="btn-derecha"><i class="bi bi-caret-right-fill"></i></div>
-
                 </div>
-            </div>
 
         <!------------- SECCION AZAFATAS ----------->
 
 
         <!-------------- SECCION COMPRA ------------>
 
-            <div class="caja">
-                <div class="subtitulo">
-                    <h2>Compra</h2>
+                <div class="caja compra">
+
+                    <div class="subtitulo">
+                        <h2>Compra</h2>
+                    </div>
+
+                    <div class="formulario">
+
+                        <div class="inputbox">
+                            <label>Nombre Completo</label>
+                            <input type="text" name="" id="origen" placeholder="Daniel Marcelo Olarte Lamas">
+                        </div>
+
+                        <div class="inputbox">
+                            <label>Correo Electronico</label>
+                            <input type="email" name="" id="origen" placeholder="ejemplo123@gmail.com">
+                        </div>
+
+                        <div class="inputbox">
+                            <label>Telefono</label>
+                            <input type="number" name="" id="origen" placeholder="2964-123456">
+                        </div>
+
+                        <div class="inputbox">
+                            <label>Metodo de pago</label>
+                            <select name="" id="">
+                                <option value="">Mimos</option>
+                                <option value="">Comida</option>
+                                <option value="">Rascar panza</option>
+                            </select>
+                        </div>
+
+                        <div class="inputbox">
+                            <input type="submit" value="Comprar" id="btn">                
+                        </div>
+
+                    </div>
                 </div>
-            </div>
 
         <!-------------- SECCION COMPRA ------------>
 
-
-        </div>
+            </div>
+        </form>
     </main>
 
     <!------------------------------- MAIN ------------------------------>

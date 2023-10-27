@@ -343,7 +343,7 @@ header .nav.visible {
   height: 70vh;
   min-height: 280px;
   max-height: 320px;
-  background-image: url(../assets/Img/Fondo_Index.jpg);
+  background-image: url(/Assets/Img/Fondo_Index.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   justify-content: center;
@@ -657,6 +657,9 @@ header .nav.visible {
   font-size: 1.1em;
   font-weight: 600;
 }
+.experiencia .contenedor-grid .caja {
+  padding: 10px 0;
+}
 .experiencia .contenedor-grid .comentarios {
   align-items: center;
 }
@@ -758,6 +761,10 @@ header .nav.visible {
 }
 .experiencia .contenedor-grid .comentarios .contenedor-carrusel .btn-derecha {
   right: 10px;
+}
+.experiencia .contenedor-grid .valoraciones {
+  border-top: 1px solid #00131f;
+  border-bottom: 1px solid #00131f;
 }
 .experiencia .contenedor-grid .valoraciones .contenedor-puntuacion {
   display: grid;
@@ -863,6 +870,9 @@ header .nav.visible {
 .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input::placeholder, .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox select::placeholder {
   color: rgba(7, 183, 240, 0.75);
 }
+.experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input option, .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox select option {
+  font-size: 0.9em;
+}
 .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox textarea {
   width: 100%;
   height: 15vh;
@@ -921,6 +931,10 @@ header .nav.visible {
   .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .opinion p {
     font-size: 0.5em;
   }
+  .experiencia .contenedor-grid .valoraciones {
+    border-top: 2px solid #00131f;
+    border-bottom: 2px solid #00131f;
+  }
 }
 @media screen and (min-width: 1024px) {
   .experiencia .contenedor-grid {
@@ -930,6 +944,7 @@ header .nav.visible {
   }
   .experiencia .contenedor-grid .comentarios {
     grid-column: 1/4;
+    border-bottom: 2px solid #00131f;
   }
   .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel {
     width: 135%;
@@ -949,6 +964,8 @@ header .nav.visible {
   }
   .experiencia .contenedor-grid .valoraciones {
     padding-right: 10px;
+    border: none;
+    border-right: 2px solid #00131f;
   }
   .experiencia .contenedor-grid .experiencias {
     width: 50vw;
@@ -980,6 +997,9 @@ header .nav.visible {
   }
   .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input::placeholder, .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox select::placeholder {
     color: rgba(7, 183, 240, 0.75);
+  }
+  .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input option, .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox select option {
+    font-size: 0.9em;
   }
   .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox #btn {
     max-width: 250px;
@@ -1087,6 +1107,9 @@ header .nav.visible {
 .login .contenedor .formulario .inputbox input::placeholder, .login .contenedor .formulario .inputbox select::placeholder {
   color: rgba(7, 183, 240, 0.75);
 }
+.login .contenedor .formulario .inputbox input option, .login .contenedor .formulario .inputbox select option {
+  font-size: 0.9em;
+}
 .login .contenedor .formulario .inputbox #btn {
   position: relative;
   width: 60%;
@@ -1160,12 +1183,16 @@ header .nav.visible {
   }
 }
 .vuelo {
+  font-size: 20px;
+}
+.vuelo form {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 10px;
+  font-size: 1em;
 }
-.vuelo .heading {
+.vuelo form .heading {
   width: 100%;
   height: 2rem;
   padding-top: 20px;
@@ -1175,7 +1202,7 @@ header .nav.visible {
   font-size: 30px;
   margin-bottom: 5px;
 }
-.vuelo .heading h1 {
+.vuelo form .heading h1 {
   font-size: 1em;
   font-weight: 600;
   color: #00131f;
@@ -1183,71 +1210,74 @@ header .nav.visible {
   margin-bottom: 0.5rem;
 }
 @media screen and (min-width: 480px) {
-  .vuelo .heading {
+  .vuelo form .heading {
     font-size: 45px;
   }
 }
 @media screen and (min-width: 768px) {
-  .vuelo .heading {
+  .vuelo form .heading {
     padding-top: 0px;
     font-size: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .vuelo .heading {
+  .vuelo form .heading {
     font-size: 70px;
   }
 }
-.vuelo .contenedor-grid {
+.vuelo form .contenedor-grid {
   margin-top: 10px;
   width: 100%;
   font-size: 1em;
   display: grid;
   justify-content: center;
 }
-.vuelo .contenedor-grid .caja {
+.vuelo form .contenedor-grid .caja {
   width: 100%;
   height: fit-content;
   font-size: 1em;
   display: flex;
   flex-direction: column;
 }
-.vuelo .contenedor-grid .caja .subtitulo {
+.vuelo form .contenedor-grid .caja .subtitulo {
   font-size: 1em;
   align-self: flex-start;
 }
-.vuelo .contenedor-grid .caja .subtitulo h2 {
+.vuelo form .contenedor-grid .caja .subtitulo h2 {
   font-style: italic;
   font-size: 1.1em;
   font-weight: 600;
 }
-.vuelo .contenedor-grid .caja .subtitulo {
+.vuelo form .contenedor-grid .caja {
+  padding: 10px 0;
+  border-bottom: 1px solid #00131f;
+}
+.vuelo form .contenedor-grid .caja .subtitulo {
   align-self: center;
 }
-.vuelo .contenedor-grid .boleto .formulario {
+.vuelo form .contenedor-grid .boleto .formulario {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(-45deg, #bbe8ff, #8ddbff);
-  padding: 10px;
   border: 2px solid #33c0fd;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .boleto .formulario .inputbox {
+.vuelo form .contenedor-grid .boleto .formulario .inputbox {
   font-size: 0.6em;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.vuelo .contenedor-grid .boleto .formulario .inputbox label {
+.vuelo form .contenedor-grid .boleto .formulario .inputbox label {
   align-self: self-start;
   font-size: 1em;
   color: #00131f;
   font-weight: 600;
 }
-.vuelo .contenedor-grid .boleto .formulario .inputbox input, .vuelo .contenedor-grid .boleto .formulario .inputbox select {
+.vuelo form .contenedor-grid .boleto .formulario .inputbox input, .vuelo form .contenedor-grid .boleto .formulario .inputbox select {
   width: 100%;
   padding: 5px;
   outline: none;
@@ -1258,42 +1288,45 @@ header .nav.visible {
   box-shadow: inset 0 0 15px rgba(50, 205, 254, 0.75);
   border: 1px solid rgba(7, 183, 240, 0.5);
 }
-.vuelo .contenedor-grid .boleto .formulario .inputbox input::placeholder, .vuelo .contenedor-grid .boleto .formulario .inputbox select::placeholder {
+.vuelo form .contenedor-grid .boleto .formulario .inputbox input::placeholder, .vuelo form .contenedor-grid .boleto .formulario .inputbox select::placeholder {
   color: rgba(7, 183, 240, 0.75);
 }
-.vuelo .contenedor-grid .boleto .formulario .inputbox.fechas {
+.vuelo form .contenedor-grid .boleto .formulario .inputbox input option, .vuelo form .contenedor-grid .boleto .formulario .inputbox select option {
+  font-size: 0.9em;
+}
+.vuelo form .contenedor-grid .boleto .formulario .inputbox.fechas {
   flex-direction: row;
   justify-content: space-between;
 }
-.vuelo .contenedor-grid .boleto .formulario .inputbox.fechas .fsalida, .vuelo .contenedor-grid .boleto .formulario .inputbox.fechas .fregreso {
+.vuelo form .contenedor-grid .boleto .formulario .inputbox.fechas .fsalida, .vuelo form .contenedor-grid .boleto .formulario .inputbox.fechas .fregreso {
   width: 48%;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .boleto .formulario .inputbox.cantidad {
+.vuelo form .contenedor-grid .boleto .formulario .inputbox.cantidad {
   flex-direction: row;
   justify-content: space-between;
 }
-.vuelo .contenedor-grid .boleto .formulario .inputbox.cantidad .canadultos, .vuelo .contenedor-grid .boleto .formulario .inputbox.cantidad .canninios, .vuelo .contenedor-grid .boleto .formulario .inputbox.cantidad .canbebes {
+.vuelo form .contenedor-grid .boleto .formulario .inputbox.cantidad .canadultos, .vuelo form .contenedor-grid .boleto .formulario .inputbox.cantidad .canninios, .vuelo form .contenedor-grid .boleto .formulario .inputbox.cantidad .canbebes {
   width: 32%;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .capitanes {
+.vuelo form .contenedor-grid .capitanes {
   align-items: center;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel {
   position: relative;
   width: 90vw;
   height: fit-content;
   overflow: hidden;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel {
   width: 400%;
   height: 100%;
   display: flex;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata {
   width: 25%;
   padding: 10px;
   display: flex;
@@ -1301,7 +1334,7 @@ header .nav.visible {
   align-items: center;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img {
   width: 100%;
   height: 100%;
   max-width: 200px;
@@ -1309,29 +1342,29 @@ header .nav.visible {
   display: flex;
   justify-content: center;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img img, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img img, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img img {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img img {
   width: 70%;
   border-radius: 50%;
   border: 1px solid #00131f;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario p, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan p, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata p {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario p, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan p, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata p {
   font-size: 0.9em;
   color: #00131f;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos {
   width: 100%;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos ul, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos ul, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos ul {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos ul, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos ul, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos ul {
   font-size: 1em;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos ul li, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos ul li, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos ul li {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos ul li, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos ul li, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos ul li {
   padding: 5px 0;
-  font-size: 0.8em;
+  font-size: 0.7em;
   list-style: none;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda,
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda,
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
   display: flex;
   position: absolute;
   top: 50%;
@@ -1346,34 +1379,34 @@ header .nav.visible {
   transition: 0.5s ease;
   user-select: none;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda:hover,
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha:hover {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda:hover,
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha:hover {
   background-color: #8ddbff;
   color: #eef9ff;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda {
   left: 10px;
 }
-.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+.vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
   right: 10px;
 }
-.vuelo .contenedor-grid .azafatas {
+.vuelo form .contenedor-grid .azafatas {
   align-items: center;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel {
   position: relative;
   width: 90vw;
   height: fit-content;
   overflow: hidden;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel {
   width: 400%;
   height: 100%;
   display: flex;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata {
   width: 25%;
   padding: 10px;
   display: flex;
@@ -1381,7 +1414,7 @@ header .nav.visible {
   align-items: center;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img {
   width: 100%;
   height: 100%;
   max-width: 200px;
@@ -1389,29 +1422,29 @@ header .nav.visible {
   display: flex;
   justify-content: center;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img img, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img img, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img img {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img img {
   width: 70%;
   border-radius: 50%;
   border: 1px solid #00131f;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario p, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan p, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata p {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario p, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan p, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata p {
   font-size: 0.9em;
   color: #00131f;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos {
   width: 100%;
   font-size: 1em;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos ul, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos ul, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos ul {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos ul, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos ul, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos ul {
   font-size: 1em;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos ul li, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos ul li, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos ul li {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos ul li, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos ul li, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos ul li {
   padding: 5px 0;
-  font-size: 0.8em;
+  font-size: 0.7em;
   list-style: none;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda,
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda,
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
   display: flex;
   position: absolute;
   top: 50%;
@@ -1426,16 +1459,737 @@ header .nav.visible {
   transition: 0.5s ease;
   user-select: none;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda:hover,
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha:hover {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda:hover,
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha:hover {
   background-color: #8ddbff;
   color: #eef9ff;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda {
   left: 10px;
 }
-.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+.vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
   right: 10px;
+}
+.vuelo form .contenedor-grid .compra {
+  border: none;
+}
+.vuelo form .contenedor-grid .compra .formulario {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 1em;
+  gap: 0.3em;
+}
+.vuelo form .contenedor-grid .compra .formulario .inputbox {
+  font-size: 0.6em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vuelo form .contenedor-grid .compra .formulario .inputbox label {
+  align-self: self-start;
+  font-size: 1em;
+  color: #00131f;
+  font-weight: 600;
+}
+.vuelo form .contenedor-grid .compra .formulario .inputbox input, .vuelo form .contenedor-grid .compra .formulario .inputbox select {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  font-size: 1em;
+  color: #eef9ff;
+  border-radius: 5px;
+  background: rgba(121, 221, 255, 0.8);
+  box-shadow: inset 0 0 15px rgba(50, 205, 254, 0.75);
+  border: 1px solid rgba(7, 183, 240, 0.5);
+}
+.vuelo form .contenedor-grid .compra .formulario .inputbox input::placeholder, .vuelo form .contenedor-grid .compra .formulario .inputbox select::placeholder {
+  color: rgba(7, 183, 240, 0.75);
+}
+.vuelo form .contenedor-grid .compra .formulario .inputbox input option, .vuelo form .contenedor-grid .compra .formulario .inputbox select option {
+  font-size: 0.9em;
+}
+.vuelo form .contenedor-grid .compra .formulario .inputbox #btn {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: "";
+  background: linear-gradient(0deg, #30a6ff, #57c4ff);
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  color: #eef9ff;
+  transition: 0.3s;
+}
+.vuelo form .contenedor-grid .compra .formulario .inputbox #btn:hover {
+  transform: scale(1.2);
+  color: #ffbc0e;
+}
+
+@media screen and (min-width: 480px) {
+  .vuelo {
+    font-size: 26px;
+  }
+  .vuelo form .contenedor-grid {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1em;
+    display: grid;
+    justify-content: center;
+  }
+  .vuelo form .contenedor-grid .caja {
+    width: 100%;
+    height: fit-content;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo {
+    font-size: 1em;
+    align-self: flex-start;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo h2 {
+    font-style: italic;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo {
+    align-self: center;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel {
+    position: relative;
+    width: 90vw;
+    height: fit-content;
+    overflow: hidden;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img img {
+    width: 70%;
+    border-radius: 50%;
+    border: 1px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario p, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan p, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata p {
+    font-size: 0.9em;
+    color: #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img {
+    max-width: 300px;
+    max-height: 250px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda,
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #00131f;
+    transform: translate(0, -50%);
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda:hover,
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha:hover {
+    background-color: #8ddbff;
+    color: #eef9ff;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda {
+    left: 10px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+    right: 10px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel {
+    position: relative;
+    width: 90vw;
+    height: fit-content;
+    overflow: hidden;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img img {
+    width: 70%;
+    border-radius: 50%;
+    border: 1px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario p, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan p, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata p {
+    font-size: 0.9em;
+    color: #00131f;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img {
+    max-width: 300px;
+    max-height: 250px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda,
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #00131f;
+    transform: translate(0, -50%);
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda:hover,
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha:hover {
+    background-color: #8ddbff;
+    color: #eef9ff;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda {
+    left: 10px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+    right: 10px;
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox {
+    font-size: 0.6em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox label {
+    align-self: self-start;
+    font-size: 1em;
+    color: #00131f;
+    font-weight: 600;
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox input, .vuelo form .contenedor-grid .compra .formulario .inputbox select {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    font-size: 1em;
+    color: #eef9ff;
+    border-radius: 5px;
+    background: rgba(121, 221, 255, 0.8);
+    box-shadow: inset 0 0 15px rgba(50, 205, 254, 0.75);
+    border: 1px solid rgba(7, 183, 240, 0.5);
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox input::placeholder, .vuelo form .contenedor-grid .compra .formulario .inputbox select::placeholder {
+    color: rgba(7, 183, 240, 0.75);
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox input option, .vuelo form .contenedor-grid .compra .formulario .inputbox select option {
+    font-size: 0.9em;
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox #btn {
+    margin-top: 20px;
+    max-width: 200px;
+    align-self: flex-end;
+  }
+}
+@media screen and (min-width: 768px) {
+  .vuelo {
+    font-size: 30px;
+  }
+  .vuelo form {
+    padding: 0 20px;
+  }
+  .vuelo form .contenedor-grid {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .vuelo form .contenedor-grid .caja {
+    width: 100%;
+    height: fit-content;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo {
+    font-size: 1em;
+    align-self: flex-start;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo h2 {
+    font-style: italic;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  .vuelo form .contenedor-grid .caja {
+    border-bottom: 2px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo {
+    align-self: center;
+  }
+  .vuelo form .contenedor-grid .boleto {
+    grid-column: 1/4;
+  }
+  .vuelo form .contenedor-grid .capitanes {
+    border-right: 2px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel {
+    position: relative;
+    width: 90vw;
+    height: fit-content;
+    overflow: hidden;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img img {
+    width: 70%;
+    border-radius: 50%;
+    border: 1px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario p, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan p, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata p {
+    font-size: 0.9em;
+    color: #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos {
+    width: 90%;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img {
+    max-width: 250px;
+    max-height: 200px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda,
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #00131f;
+    transform: translate(0, -50%);
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda:hover,
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha:hover {
+    background-color: #8ddbff;
+    color: #eef9ff;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda {
+    left: 10px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+    right: 10px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel {
+    width: 44vw;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda {
+    left: -10px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+    right: -10px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel {
+    position: relative;
+    width: 90vw;
+    height: fit-content;
+    overflow: hidden;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img img {
+    width: 70%;
+    border-radius: 50%;
+    border: 1px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario p, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan p, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata p {
+    font-size: 0.9em;
+    color: #00131f;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos {
+    width: 90%;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img {
+    max-width: 250px;
+    max-height: 200px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda,
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #00131f;
+    transform: translate(0, -50%);
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda:hover,
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha:hover {
+    background-color: #8ddbff;
+    color: #eef9ff;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda {
+    left: 10px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+    right: 10px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel {
+    width: 44vw;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda {
+    left: -10px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+    right: -10px;
+  }
+  .vuelo form .contenedor-grid .compra {
+    grid-column: 1/4;
+    border: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .vuelo {
+    font-size: 36px;
+  }
+  .vuelo form {
+    padding: 0 15px;
+  }
+  .vuelo form .contenedor-grid {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1em;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .vuelo form .contenedor-grid .caja {
+    width: 100%;
+    height: fit-content;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo {
+    font-size: 1em;
+    align-self: flex-start;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo h2 {
+    font-style: italic;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+  .vuelo form .contenedor-grid .caja {
+    border-bottom: none;
+    padding: 20px;
+  }
+  .vuelo form .contenedor-grid .caja .subtitulo {
+    align-self: center;
+  }
+  .vuelo form .contenedor-grid .boleto {
+    grid-column: 1/5;
+    border-bottom: 2px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes {
+    border-right: 2px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel {
+    position: relative;
+    width: 90vw;
+    height: fit-content;
+    overflow: hidden;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img img, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img img {
+    width: 70%;
+    border-radius: 50%;
+    border: 1px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario p, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan p, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata p {
+    font-size: 0.9em;
+    color: #00131f;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos, .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos {
+    width: 80%;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda,
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #00131f;
+    transform: translate(0, -50%);
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda:hover,
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha:hover {
+    background-color: #8ddbff;
+    color: #eef9ff;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda {
+    left: 10px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+    right: 10px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel {
+    width: 32vw;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda {
+    left: 0px;
+  }
+  .vuelo form .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+    right: 0px;
+  }
+  .vuelo form .contenedor-grid .azafatas {
+    border-right: 2px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel {
+    position: relative;
+    width: 90vw;
+    height: fit-content;
+    overflow: hidden;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata {
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img img, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img img {
+    width: 70%;
+    border-radius: 50%;
+    border: 1px solid #00131f;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario p, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan p, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata p {
+    font-size: 0.9em;
+    color: #00131f;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos, .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos {
+    width: 80%;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda,
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #00131f;
+    transform: translate(0, -50%);
+    transition: 0.5s ease;
+    user-select: none;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda:hover,
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha:hover {
+    background-color: #8ddbff;
+    color: #eef9ff;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda {
+    left: 10px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+    right: 10px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel {
+    width: 32vw;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda {
+    left: 0px;
+  }
+  .vuelo form .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+    right: 0px;
+  }
+  .vuelo form .contenedor-grid .compra {
+    grid-column: auto;
+  }
+  .vuelo form .contenedor-grid .compra .formulario {
+    padding: 11px;
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox {
+    font-size: 0.6em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox label {
+    align-self: self-start;
+    font-size: 1em;
+    color: #00131f;
+    font-weight: 600;
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox input, .vuelo form .contenedor-grid .compra .formulario .inputbox select {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    font-size: 1em;
+    color: #eef9ff;
+    border-radius: 5px;
+    background: rgba(121, 221, 255, 0.8);
+    box-shadow: inset 0 0 15px rgba(50, 205, 254, 0.75);
+    border: 1px solid rgba(7, 183, 240, 0.5);
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox input::placeholder, .vuelo form .contenedor-grid .compra .formulario .inputbox select::placeholder {
+    color: rgba(7, 183, 240, 0.75);
+  }
+  .vuelo form .contenedor-grid .compra .formulario .inputbox input option, .vuelo form .contenedor-grid .compra .formulario .inputbox select option {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .vuelo {
+    font-size: 40px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
