@@ -6,9 +6,7 @@ let btnIzq = document.querySelector(".btn-izquierda"),
 let operacion = 0,
     contador = 0,
     cantidadUsuarios = 100 / usuarios.length;
-
-let stars = document.querySelectorAll(".star");    
-
+    
 btnIzq.addEventListener("click", function(){
     contador--;
     if(contador < 0){
@@ -41,17 +39,6 @@ btnDer.addEventListener("click", function(){
     
 });
 
-stars.forEach(function (star, index){
-    star.addEventListener("click", function(){
-        for (let i=0; i<=index; i++){
-            stars[i].classList.add("checked");
-            stars[i].style.transition = "all ease .3s";
-        }
-        for (let i=index+1; i<stars.length; i++) {
-            stars[i].classList.remove("checked");
-            stars[i].style.transition = "all ease .3s";
-        }
-    })
-})
+
 
 

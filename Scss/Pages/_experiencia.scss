@@ -18,118 +18,46 @@
         .comentarios{ 
             align-items: center;
 
-            .contenedor-carrusel{
-                position: relative;
-                width: 90vw;
-                height: fit-content;
-                overflow: hidden;
-                font-size: 1em;
-
-                .carrusel{
-                    width: 400%;
-                    height: 100%;
+            @include slider(){
+                .estrellas{
                     display: flex;
+                    justify-content: center;
+                    align-items: center;
                     font-size: 1em;
+                    gap: .2em;
 
-                    .usuario{
-                        width: calc(100% / 4);
-                        padding: 10px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        font-size: 1em;
-                        
-                        .img{
-                            width: 100%;
-                            height: 100%;
-                            max-width: 200px;
-                            max-height: 150px;
-                            display: flex;
-                            justify-content: center;
-
-                            img{
-                                width: 70%;
-                                border-radius: 50%;
-                                border: 1px solid $negro;
-                            }
-                        }
-                        
-                        p{
-                            font-size: .9em;
-                            color: $negro;
-                        }
-
-                        .estrellas{
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                    i{
+                        &.star{
                             font-size: 1em;
-                            gap: .2em;
-
-                            i{
-                                &.star{
-                                    font-size: 1em;
-                                    color: $amarillo;
-                                }
-                            }
-                        }
-    
-                        .opinion{
-                            width: 100%;
-                            max-width: 350px;
-                            position: relative;
-                            margin-top: 10px;
-                            padding: 5px;
-                            font-size: 1em;
-                            background-color: $blanco  ;
-                            border-radius: 10px;
-    
-                            &::before{
-                                content: "";
-                                border-left: 10px solid transparent;
-                                border-right: 10px solid transparent;
-                                border-bottom: 10px solid $blanco;
-                                position: absolute;
-                                top: -10px;
-                                left: 50%;
-                                transform: translateX(-50%);                            
-                            }
-                            
-                            p{
-                                font-size: .6em;
-                            }
+                            color: $amarillo;
                         }
                     }
                 }
 
-                .btn-izquierda,
-                .btn-derecha{
-                    display: flex;
-                    position: absolute;
-                    top: 50%;
-                    font-size: 1.5rem;
-                    background-color: transparent;
-                    border-radius: 50%;
+                .opinion{
+                    width: 100%;
+                    max-width: 350px;
+                    position: relative;
+                    margin-top: 10px;
                     padding: 5px;
-                    font-weight: 600;
-                    cursor: pointer;
-                    color: $negro;
-                    transform: translate(0,-50%);
-                    transition: .5s ease;
-                    user-select: none;
+                    font-size: 1em;
+                    background-color: $blanco  ;
+                    border-radius: 10px;
 
-                    &:hover{
-                        background-color: $celeste1;
-                        color: $blanco;
+                    &::before{
+                        content: "";
+                        border-left: 10px solid transparent;
+                        border-right: 10px solid transparent;
+                        border-bottom: 10px solid $blanco;
+                        position: absolute;
+                        top: -10px;
+                        left: 50%;
+                        transform: translateX(-50%);                            
                     }
-                }
-
-                .btn-izquierda{
-                    left: 10px;
-                }
-
-                .btn-derecha{
-                    right: 10px;
+                    
+                    p{
+                        font-size: .6em;
+                    }
                 }
             }
         }

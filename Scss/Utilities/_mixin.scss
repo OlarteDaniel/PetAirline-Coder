@@ -19,6 +19,7 @@
             border-bottom: 3px solid $amarillo;
             margin-bottom: .5rem;
         }
+
     }
 
     @include desde(480px){
@@ -68,6 +69,85 @@
             }
         }
         @content;
+    }
+}
+
+@mixin slider(){
+    .contenedor-carrusel{
+        position: relative;
+        width: 90vw;
+        height: fit-content;
+        overflow: hidden;
+        font-size: 1em;
+
+        .carrusel{
+            width: 400%;
+            height: 100%;
+            display: flex;
+            font-size: 1em;
+
+            .usuario,.capitan,.azafata{
+                width: calc(100% / 4);
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 1em;
+                
+                .img{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 200px;
+                    max-height: 150px;
+                    display: flex;
+                    justify-content: center;
+
+                    img{
+                        width: 70%;
+                        border-radius: 50%;
+                        border: 1px solid $negro;
+                    }
+                }
+                
+                p{
+                    font-size: .9em;
+                    color: $negro;
+                }
+
+                @content;
+
+            }
+        }
+
+        .btn-izquierda,
+        .btn-derecha{
+            display: flex;
+            position: absolute;
+            top: 50%;
+            font-size: 1.5rem;
+            background-color: transparent;
+            border-radius: 50%;
+            padding: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            color: $negro;
+            transform: translate(0,-50%);
+            transition: .5s ease;
+            user-select: none;
+
+            &:hover{
+                background-color: $celeste1;
+                color: $blanco;
+            }
+        }
+
+        .btn-izquierda{
+            left: 10px;
+        }
+
+        .btn-derecha{
+            right: 10px;
+        }
     }
 }
 

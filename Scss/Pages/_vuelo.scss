@@ -1,0 +1,111 @@
+@import '../Utilities/variables';
+@import '../Utilities/mixin';
+
+@import '../Components/input';
+@import '../Components/button';
+
+@import '../Breakpoints/medidas';
+
+.vuelo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    
+    @include titulo();
+
+    @include grid(){
+
+        .caja{
+
+            .subtitulo{
+                align-self: center;
+            }
+        }
+
+        .boleto{
+
+            .formulario{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background:linear-gradient(-45deg,$celeste2,$celeste1);
+                padding: 10px;
+                border: 2px solid #33c0fd;
+                border-radius: 20px;
+                font-size: 1em;
+
+                @include input(){
+                    &.fechas{
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        .fsalida, .fregreso{
+                            width: 48%;
+                            font-size: 1em;
+                        }
+                    }
+
+                    &.cantidad{
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        .canadultos,.canninios,.canbebes{
+                            width: 32%;
+                            font-size: 1em;
+                        }
+                    }
+                    
+                };
+                }
+        }
+
+        .capitanes{
+            align-items: center;
+
+            @include slider(){
+                
+                .datos{
+                    width: 100%;
+                    font-size: 1em;
+
+                    ul{
+                        font-size: 1em;
+
+                        li{
+                            padding: 5px 0;
+                            font-size: .8em;
+                            list-style: none;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .azafatas{
+            align-items: center;
+
+            @include slider(){
+                
+                .datos{
+                    width: 100%;
+                    font-size: 1em;
+
+                    ul{
+                        font-size: 1em;
+
+                        li{
+                            padding: 5px 0;
+                            font-size: .8em;
+                            list-style: none;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}

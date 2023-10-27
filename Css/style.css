@@ -673,7 +673,7 @@ header .nav.visible {
   display: flex;
   font-size: 1em;
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata {
   width: 25%;
   padding: 10px;
   display: flex;
@@ -681,7 +681,7 @@ header .nav.visible {
   align-items: center;
   font-size: 1em;
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .img {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .img, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan .img, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata .img {
   width: 100%;
   height: 100%;
   max-width: 200px;
@@ -689,27 +689,27 @@ header .nav.visible {
   display: flex;
   justify-content: center;
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .img img {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .img img, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan .img img, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata .img img {
   width: 70%;
   border-radius: 50%;
   border: 1px solid #00131f;
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario p {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario p, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan p, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata p {
   font-size: 0.9em;
   color: #00131f;
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .estrellas {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .estrellas, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan .estrellas, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata .estrellas {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1em;
   gap: 0.2em;
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .estrellas i.star {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .estrellas i.star, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan .estrellas i.star, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata .estrellas i.star {
   font-size: 1em;
   color: #ffbc0e;
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .opinion {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .opinion, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan .opinion, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata .opinion {
   width: 100%;
   max-width: 350px;
   position: relative;
@@ -719,7 +719,7 @@ header .nav.visible {
   background-color: #eef9ff;
   border-radius: 10px;
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .opinion::before {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .opinion::before, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan .opinion::before, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata .opinion::before {
   content: "";
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
@@ -729,7 +729,7 @@ header .nav.visible {
   left: 50%;
   transform: translateX(-50%);
 }
-.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .opinion p {
+.experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .usuario .opinion p, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .capitan .opinion p, .experiencia .contenedor-grid .comentarios .contenedor-carrusel .carrusel .azafata .opinion p {
   font-size: 0.6em;
 }
 .experiencia .contenedor-grid .comentarios .contenedor-carrusel .btn-izquierda,
@@ -849,7 +849,7 @@ header .nav.visible {
   color: #00131f;
   font-weight: 600;
 }
-.experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input {
+.experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input, .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox select {
   width: 100%;
   padding: 5px;
   outline: none;
@@ -860,7 +860,7 @@ header .nav.visible {
   box-shadow: inset 0 0 15px rgba(50, 205, 254, 0.75);
   border: 1px solid rgba(7, 183, 240, 0.5);
 }
-.experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input::placeholder {
+.experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input::placeholder, .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox select::placeholder {
   color: rgba(7, 183, 240, 0.75);
 }
 .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox textarea {
@@ -967,7 +967,7 @@ header .nav.visible {
     color: #00131f;
     font-weight: 600;
   }
-  .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input {
+  .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input, .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox select {
     width: 100%;
     padding: 5px;
     outline: none;
@@ -978,7 +978,7 @@ header .nav.visible {
     box-shadow: inset 0 0 15px rgba(50, 205, 254, 0.75);
     border: 1px solid rgba(7, 183, 240, 0.5);
   }
-  .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input::placeholder {
+  .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox input::placeholder, .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox select::placeholder {
     color: rgba(7, 183, 240, 0.75);
   }
   .experiencia .contenedor-grid .experiencias .contenedor-opinion .formulario .inputbox #btn {
@@ -1073,7 +1073,7 @@ header .nav.visible {
   color: #00131f;
   font-weight: 600;
 }
-.login .contenedor .formulario .inputbox input {
+.login .contenedor .formulario .inputbox input, .login .contenedor .formulario .inputbox select {
   width: 100%;
   padding: 5px;
   outline: none;
@@ -1084,7 +1084,7 @@ header .nav.visible {
   box-shadow: inset 0 0 15px rgba(50, 205, 254, 0.75);
   border: 1px solid rgba(7, 183, 240, 0.5);
 }
-.login .contenedor .formulario .inputbox input::placeholder {
+.login .contenedor .formulario .inputbox input::placeholder, .login .contenedor .formulario .inputbox select::placeholder {
   color: rgba(7, 183, 240, 0.75);
 }
 .login .contenedor .formulario .inputbox #btn {
@@ -1158,6 +1158,284 @@ header .nav.visible {
   .login .contenedor {
     justify-content: space-evenly;
   }
+}
+.vuelo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+.vuelo .heading {
+  width: 100%;
+  height: 2rem;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.vuelo .heading h1 {
+  font-size: 1em;
+  font-weight: 600;
+  color: #00131f;
+  border-bottom: 3px solid #ffbc0e;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 480px) {
+  .vuelo .heading {
+    font-size: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .vuelo .heading {
+    padding-top: 0px;
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .vuelo .heading {
+    font-size: 70px;
+  }
+}
+.vuelo .contenedor-grid {
+  margin-top: 10px;
+  width: 100%;
+  font-size: 1em;
+  display: grid;
+  justify-content: center;
+}
+.vuelo .contenedor-grid .caja {
+  width: 100%;
+  height: fit-content;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.vuelo .contenedor-grid .caja .subtitulo {
+  font-size: 1em;
+  align-self: flex-start;
+}
+.vuelo .contenedor-grid .caja .subtitulo h2 {
+  font-style: italic;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.vuelo .contenedor-grid .caja .subtitulo {
+  align-self: center;
+}
+.vuelo .contenedor-grid .boleto .formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(-45deg, #bbe8ff, #8ddbff);
+  padding: 10px;
+  border: 2px solid #33c0fd;
+  border-radius: 20px;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .boleto .formulario .inputbox {
+  font-size: 0.6em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vuelo .contenedor-grid .boleto .formulario .inputbox label {
+  align-self: self-start;
+  font-size: 1em;
+  color: #00131f;
+  font-weight: 600;
+}
+.vuelo .contenedor-grid .boleto .formulario .inputbox input, .vuelo .contenedor-grid .boleto .formulario .inputbox select {
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  font-size: 1em;
+  color: #eef9ff;
+  border-radius: 5px;
+  background: rgba(121, 221, 255, 0.8);
+  box-shadow: inset 0 0 15px rgba(50, 205, 254, 0.75);
+  border: 1px solid rgba(7, 183, 240, 0.5);
+}
+.vuelo .contenedor-grid .boleto .formulario .inputbox input::placeholder, .vuelo .contenedor-grid .boleto .formulario .inputbox select::placeholder {
+  color: rgba(7, 183, 240, 0.75);
+}
+.vuelo .contenedor-grid .boleto .formulario .inputbox.fechas {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vuelo .contenedor-grid .boleto .formulario .inputbox.fechas .fsalida, .vuelo .contenedor-grid .boleto .formulario .inputbox.fechas .fregreso {
+  width: 48%;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .boleto .formulario .inputbox.cantidad {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.vuelo .contenedor-grid .boleto .formulario .inputbox.cantidad .canadultos, .vuelo .contenedor-grid .boleto .formulario .inputbox.cantidad .canninios, .vuelo .contenedor-grid .boleto .formulario .inputbox.cantidad .canbebes {
+  width: 32%;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .capitanes {
+  align-items: center;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel {
+  position: relative;
+  width: 90vw;
+  height: fit-content;
+  overflow: hidden;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata {
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 150px;
+  display: flex;
+  justify-content: center;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .img img, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .img img, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .img img {
+  width: 70%;
+  border-radius: 50%;
+  border: 1px solid #00131f;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario p, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan p, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata p {
+  font-size: 0.9em;
+  color: #00131f;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos {
+  width: 100%;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos ul, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos ul, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos ul {
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .usuario .datos ul li, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .capitan .datos ul li, .vuelo .contenedor-grid .capitanes .contenedor-carrusel .carrusel .azafata .datos ul li {
+  padding: 5px 0;
+  font-size: 0.8em;
+  list-style: none;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda,
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #00131f;
+  transform: translate(0, -50%);
+  transition: 0.5s ease;
+  user-select: none;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda:hover,
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha:hover {
+  background-color: #8ddbff;
+  color: #eef9ff;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-izquierda {
+  left: 10px;
+}
+.vuelo .contenedor-grid .capitanes .contenedor-carrusel .btn-derecha {
+  right: 10px;
+}
+.vuelo .contenedor-grid .azafatas {
+  align-items: center;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel {
+  position: relative;
+  width: 90vw;
+  height: fit-content;
+  overflow: hidden;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel {
+  width: 400%;
+  height: 100%;
+  display: flex;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata {
+  width: 25%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 150px;
+  display: flex;
+  justify-content: center;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .img img, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .img img, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .img img {
+  width: 70%;
+  border-radius: 50%;
+  border: 1px solid #00131f;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario p, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan p, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata p {
+  font-size: 0.9em;
+  color: #00131f;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos {
+  width: 100%;
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos ul, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos ul, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos ul {
+  font-size: 1em;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .usuario .datos ul li, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .capitan .datos ul li, .vuelo .contenedor-grid .azafatas .contenedor-carrusel .carrusel .azafata .datos ul li {
+  padding: 5px 0;
+  font-size: 0.8em;
+  list-style: none;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda,
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #00131f;
+  transform: translate(0, -50%);
+  transition: 0.5s ease;
+  user-select: none;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda:hover,
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha:hover {
+  background-color: #8ddbff;
+  color: #eef9ff;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-izquierda {
+  left: 10px;
+}
+.vuelo .contenedor-grid .azafatas .contenedor-carrusel .btn-derecha {
+  right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

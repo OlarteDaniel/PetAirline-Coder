@@ -14,8 +14,6 @@ let mostrarTexto_btn3 = document.getElementById('mostrarTexto_btn3');
 let mostrarTexto3 = document.getElementById('mostrarTexto3');
 
 
-
-
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
 })
