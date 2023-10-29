@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <!-- LINK CSS -->
     <link rel="stylesheet" href="../Css/style.css">
+    <!-- LINK DE AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -45,7 +47,8 @@
         <div class="heading">
             <h1>Sobre Nosotros</h1>
         </div>
-        <div class="somos">        
+        
+        <div class="somos" data-aos="fade-right">        
             <img src="../Assets/Img/Somos.jpg" alt="">
             <div class="texto">
                 <h2 class="subtitulo">
@@ -67,7 +70,8 @@
             </div>
             
         </div>
-        <div class="equipo">
+
+        <div class="equipo" data-aos="fade-left">
             <img src="../Assets/Img/Equipo.jpg" alt="">
             <div class="texto">
                 <h2 class="subtitulo">
@@ -89,7 +93,8 @@
                 <button class="mas" id="mostrarTexto_btn2">Leer Más</button>
             </div>
         </div>
-        <div class="historia">
+
+        <div class="historia" data-aos="fade-right">
             <img src="../Assets/Img/Historia.jpg" alt="">
             <div class="texto">
                 <h2 class="subtitulo">
@@ -109,6 +114,7 @@
                 <button class="mas" id="mostrarTexto_btn3">Leer Más</button>
             </div>
         </div>  
+
     </main>
     
     <!------------------------------- MAIN ------------------------------>
@@ -137,6 +143,11 @@
 
     <!-- SCRIPST JS PROPIOS -->
     <script src="../Assets/Js/scrpts.js"></script>
+    <!-- SCRIPT DE AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 </html>
