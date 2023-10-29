@@ -343,7 +343,7 @@ header .nav.visible {
   height: 70vh;
   min-height: 280px;
   max-height: 320px;
-  background-image: url(/Assets/Img/Fondo_Index.jpg);
+  background-image: url("../Assets/Img/Fondo_Index.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   justify-content: center;
