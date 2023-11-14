@@ -261,6 +261,21 @@ header .nav.visible {
   text-align: center;
   font-size: 20px;
 }
+.pie .ubicacion p:not(#dire), .pie .contactos p:not(#dire), .pie .preguntas p:not(#dire) {
+  font-size: 1.2em;
+  color: #ffbc0e;
+  padding: 5px;
+  font-weight: 600;
+}
+.pie .ubicacion p#dire, .pie .contactos p#dire, .pie .preguntas p#dire {
+  font-size: 1em;
+  color: #eef9ff;
+}
+.pie .ubicacion a#link, .pie .contactos a#link, .pie .preguntas a#link {
+  font-size: 1em;
+  color: #eef9ff;
+  text-decoration: none;
+}
 .pie .contactos a {
   padding: 0 0.6em;
   font-size: 20px;
@@ -282,20 +297,13 @@ header .nav.visible {
   color: #eef9ff;
   transition: 0.3s;
 }
-.pie p:not(#dire) {
-  font-size: 1.2em;
-  color: #ffbc0e;
-  padding: 5px;
-  font-weight: 600;
-}
-.pie p#dire {
-  font-size: 1em;
+.pie .marca {
+  font-size: 15px;
   color: #eef9ff;
 }
-.pie a#link {
-  font-size: 1em;
-  color: #eef9ff;
-  text-decoration: none;
+.pie .marca i {
+  font-size: 15px;
+  margin-right: 2px;
 }
 
 @media screen and (min-width: 480px) {
@@ -304,10 +312,17 @@ header .nav.visible {
     height: fit-content;
     padding: 30px;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
   .pie .ubicacion, .pie .contactos, .pie .preguntas {
     padding: 0;
+    flex: 1;
+  }
+  .pie .marca {
+    margin-top: 10px;
+    flex-basis: 100%;
+    text-align: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -319,6 +334,9 @@ header .nav.visible {
   }
   .pie .contactos a {
     font-size: 1em;
+  }
+  .pie .marca {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
